@@ -1,7 +1,14 @@
 import React from 'react';
+import { CssBaseline } from '@mui/material';
+import Catalog from './features/Catalog/Catalog';
 
 function App() {
-  return <div>Hello World!</div>
+  return (
+    <>
+      <CssBaseline />
+      <Catalog />
+    </>
+  )
 }
 
 export default App;
