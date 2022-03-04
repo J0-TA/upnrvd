@@ -13,7 +13,7 @@ const MovieCard = ({ movie, idx }) => {
         
     return (
         <Badge badgeContent={rate} color="success">
-            <Card sx={{ width: 450, cursor:'pointer'}} onClick={handleExpandClick}>              
+            <Card sx={{ width: 450, cursor:'pointer'}} onClick={handleExpandClick} component="article">              
                 <CardMedia 
                     component='img'
                     height='250'
@@ -21,14 +21,20 @@ const MovieCard = ({ movie, idx }) => {
                     alt='movie poster fake'
                 />
                 <CardContent>
-                    <Typography variant="h5" component="div" color="primary">
+                    <Typography variant="h5" component="h1" color="primary">
                         {title}
                     </Typography>
                 </CardContent>
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
                     <CardContent>
                         <Typography variant="body2" color="text.secondary">
-                            {`${director} (${year}). ${duration}`}
+                            {`Director: ${director}`}
+                        </Typography>                        
+                        <Typography variant="body2" color="text.secondary">
+                            {`Year: ${year}`}
+                        </Typography>                        
+                        <Typography variant="body2" color="text.secondary">
+                            {`Duration: ${duration}`}
                         </Typography>                        
                         {genre.map((genre, idx) => (
                             <Chip 
