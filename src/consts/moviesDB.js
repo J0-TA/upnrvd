@@ -351,16 +351,6 @@ export const moviesDB = [
       "rate": 8.5
     },
     {
-      "title": "C\"era una volta il West",
-      "year": 1968,
-      "director": "Sergio Leone",
-      "duration": "2h 44min",
-      "genre": [
-        "Western"
-      ],
-      "rate": 8.6
-    },
-    {
       "title": "Interstellar",
       "year": 2014,
       "director": "Christopher Nolan",
