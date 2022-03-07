@@ -7,7 +7,7 @@ import MovieForm from '../MovieForm/MovieForm';
 
 const Catalog = () => {
     const [open, setOpen] = useState(false);
-    const catalog = useSelector((state) => state.catalog);
+    const catalog = useSelector((state) => state.catalog.movies);
 
     const handleOpenForm = () => setOpen(true);
     const handleCloseForm = () => setOpen(false);
@@ -21,7 +21,7 @@ const Catalog = () => {
                 <Button sx={{ width: 450}} variant="contained" color="primary" onClick={handleOpenForm}>Click here to ask for a new movie</Button>
             </Grid>
             <List>
-                {catalog.movies.map((movie, idx) => (
+                {catalog.map((movie, idx) => (
                     <Grid component="li" item margin={4} key={`${movie.title}${idx}`} >                   
                         <MovieCard movie={movie} idx={idx + 1} key={`${movie.title}${movie.year}`} />
                     </Grid>))

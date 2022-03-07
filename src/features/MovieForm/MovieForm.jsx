@@ -29,7 +29,7 @@ const MovieForm = ({ open, handleClose, movie}) => {
     };
     const handleSave = () => {
         if (formData.title && formData.year && formData.director && formData.genre) {
-            movie ? dispatch(movieAdded(formData)) : dispatch(movieUpdated(formData))
+            movie ? dispatch(movieUpdated(formData)) : dispatch(movieAdded(formData))
             handleClose();
         } else {
             setError("Fill in all fields");
@@ -42,6 +42,7 @@ const MovieForm = ({ open, handleClose, movie}) => {
             <DialogContent>
                 <DialogContentText>{formHeader.formContext}</DialogContentText>
                 <TextField
+                    sx={{hover: ""}}
                     margin="dense"
                     id="title"
                     name="title"
@@ -51,7 +52,8 @@ const MovieForm = ({ open, handleClose, movie}) => {
                     onChange={handleInputChange}
                     fullWidth
                     error={error !== null}
-                    helperText={error}
+                    helperText={movie ? "You can't change movie's title" : error}
+                    disabled={movie !== undefined}
                     variant="standard" />
                 <TextField
                     margin="dense"

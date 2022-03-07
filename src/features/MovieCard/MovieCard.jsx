@@ -17,7 +17,7 @@ const MovieCard = ({ movie, idx }) => {
     const handleDeleteClick = () => dispatch(movieDeleted(movie));
     const handleOpenForm = () => setOpen(true);
     const handleCloseForm = () => setOpen(false);
-        
+     
     return (
         <>
             <Badge badgeContent={rate} color="success">
