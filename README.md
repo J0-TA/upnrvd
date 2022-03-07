@@ -1,8 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
-Styles applied with [Material UI].
+Styles applied with Material UI.
 
-I've used [Loren Picsun] to mock movies posters.
+I've used Loren Picsun to mock movies posters.
 
 ## Available Scripts
 
